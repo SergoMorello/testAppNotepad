@@ -1,0 +1,136 @@
+a {
+	text-decoration: none;
+}
+
+button {
+	border: 0;
+	cursor: pointer;
+}
+
+.root {
+	width: 100vw;
+	height: 100vh;
+	background-color: #D4D4D4;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.block {
+	flex: 0.5;
+	padding: 10px 20px 10px 20px;
+	min-width: 300px;
+}
+
+.blockChild {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+ul.listMessage {
+	flex: 1;
+	padding: 0;
+}
+
+ul.listMessage > li {
+	list-style-type: none;
+	margin: 10px 0 10px 0;
+}
+
+ul.listMessage > li:first-child {
+	margin-top: 0;
+}
+
+ul.listMessage > li:last-child {
+	margin-bottom: 0;
+}
+
+.blockBox {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 15px;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+
+.blockMessage {
+	display: flex;
+	justify-content: space-between;
+}
+
+.blockMessageName {
+	display: block;
+	font-size: 30px;
+	color: #324465;
+}
+
+.blockMessageDate {
+	display: block;
+	font-size: 20px;
+	margin: 15px 0 0 0;
+	padding: 0 0 0 30px;
+	color: #CCCCCC;
+	background: url('/img/ic_calendar.svg') no-repeat;
+	background-size: contain;
+}
+
+.blockMessageDelete {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url('/img/ic_delete.svg') no-repeat;
+	background-size: contain;
+}
+
+.blockMessageText {
+	flex: 1;
+	display: block;
+	padding: 10px;
+	background-color: #DBDBDB;
+	border: 2px solid #F7F7F7;
+	border-radius: 10px;
+	resize: none;
+	outline:none;
+	font-size: 25px;
+	color: #7A7A7A;
+}
+
+.blockButtons {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0 0 0;
+}
+
+.blockButtons > * {
+	flex: 1;
+	display: block;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+	color: #FFFFFF;
+	font-size: 20px;
+	margin: 0 10px 0 10px;
+}
+
+.blockButtons > *:first-child {
+	margin-left: 0;
+}
+
+.blockButtons > *:last-child {
+	margin-right: 0;
+}
+
+.button1 {
+	background-color: #324465;
+}
+
+.button2 {
+	background-color: #2188FE;
+}
