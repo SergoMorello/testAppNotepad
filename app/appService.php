@@ -6,13 +6,14 @@ class appService extends core {
 	
 	public function register() {
 
-		exceptions::declare('validate',function($errors){
-			return response([
-				'success' => false,
-				'errors' => $errors
-			])->json();
-		  });
-
+		if (request()->has('api')) {
+			exceptions::declare('validate',function($errors){
+				return response([
+					'success' => false,
+					'errors' => $errors
+				])->json();
+			});
+		}
 		app::singleton('mainClass', function() {
 			return new class{
 				public function cuteText($text, $size = 100) {

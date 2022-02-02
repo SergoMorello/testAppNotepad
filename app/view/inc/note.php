@@ -1,6 +1,6 @@
 <form method="POST" action="{{route('submit', [$id ?? 0])}}" class="blockChild noteForm">
 	<div class="blockBox">
-		<textarea class="blockMessageText noteText" name='text' placeholder="Текст заметки">{{old('text', $text ?? '')}}</textarea>
+		<textarea class="blockMessageText noteText" name='text' placeholder="Текст заметки" required>{{old('text', $text ?? '')}}</textarea>
 		<span class="blockMessageDate">{{app('mainClass')->showDate($date ?? null)}}</span>
 	</div>
 	<div class="blockButtons">
