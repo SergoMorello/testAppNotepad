@@ -8,6 +8,7 @@ var note = {
 		return $('.noteForm')
 	},
 	show: function(content) {
+		console.log(content);
 		this.obj().html(content);
 		control();
 	},
