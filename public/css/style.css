@@ -33,6 +33,18 @@ button {
 	flex-direction: column;
 }
 
+.listNotes {
+	max-height: 90vh;
+    overflow-y: auto;
+}
+
+.listEmpty {
+	text-align: center;
+	font-size: 25px;
+	color: #878787;
+	padding: 25px;
+}
+
 ul.listMessage {
 	flex: 1;
 	padding: 0;
@@ -129,8 +141,18 @@ ul.listMessage > li:last-child {
 
 .button1 {
 	background-color: #324465;
+	transition: .3s;
+}
+
+.button1:hover {
+	background-color: #597BB2;
 }
 
 .button2 {
 	background-color: #2188FE;
+	transition: .3s;
+}
+
+.button2:hover {
+	background-color: #1C74D8;
 }

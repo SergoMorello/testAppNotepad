@@ -8,7 +8,7 @@ class Notes extends model {
 			'id',
 			'text',
 			'date'
-			)->get();
+			)->orderBy('id','DESC')->get();
 	}
 
 	public function getNote($id) {
@@ -22,7 +22,8 @@ class Notes extends model {
 	public function edit($id, $params) {
 		$text = $params['text'] ?? '';
 		return self::find($id)->update([
-			'text' => $text
+			'text' => $text,
+			'date' => DB::raw('NOW()')
 		]);
 	}
 
@@ -30,7 +31,12 @@ class Notes extends model {
 		$text = $params['text'] ?? '';
 		$note = new self;
 		$note->text = $text;
+		$note->date = DB::raw('NOW()');
 		
 		return $note->save();
+	}
+
+	public function remove($id) {
+		return self::find($id)->delete();
 	}
 }
