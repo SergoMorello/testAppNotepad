@@ -11,7 +11,9 @@
 			</div>
 		</div>
 		<div class="block">
+			<div class="blockChild noteForm">
 			@include('inc.note', ['id'=>($id ?? 0), 'text' => ($text ?? ''), 'date' => ($date ?? '')])
+			</div>
 		</div>
 	</div>
 @endsection

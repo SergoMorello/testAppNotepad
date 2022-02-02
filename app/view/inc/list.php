@@ -1,4 +1,3 @@
-
 <div class="listNotes">
 	@if($list->count())
 	<ul class="listMessage">

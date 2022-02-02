@@ -8,9 +8,9 @@ var note = {
 		return $('.noteForm')
 	},
 	show: function(content) {
-		console.log(content);
 		this.obj().html(content);
 		control();
+		form();
 	},
 	error: function(name) {
 		this.obj().find('[name="'+name+'"]').effect('highlight',{
@@ -19,6 +19,11 @@ var note = {
 	},
 	flush: function(effect) {
 		let obj = this.obj().find('.noteText').val("");
+		let form = this.obj().find('form');
+		let action = form.attr('action');
+		let lastSlashIndex = action.lastIndexOf('/') + 1;
+		let replace = '0';
+		form.attr('action', action.substr(0, lastSlashIndex) + replace);
 		if (effect)
 			obj.effect('highlight',{
 				color: '#7FC9FF'
@@ -34,7 +39,7 @@ var notes = {
 		this.obj().html(content);
 		control();
 	},
-	create: function(action, data) {
+	submit: function(action, data) {
 		let xhr = new XMLHttpRequest();
 		
 		xhr.open('POST', action, false);
@@ -92,7 +97,7 @@ function form() {
 		let formData = new FormData(this);
 		formData.set('api', true);
 		
-		notes.create(action, formData);
+		notes.submit(action, formData);
 		
 		return false;
 	});

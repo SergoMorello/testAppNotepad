@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <title>Notepad</title>
+        <meta http-equiv="Content-Type" content="text/html charset=utf-8">
+        <meta name="description" content="Notepad">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/com/9bb550ee4bc6b0ad097008a9cabe7fdd/styles.css" rel="stylesheet">
+		<script src="/com/a7d6cde06f30b4ba1c7f375379dfa2a1/scripts.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+		<div class="root">
+			<div class="container">
+				<div class="block">
+					<div class="blockChild">
+						<div class="listNotes">
+							<div class="listEmpty">Тут пока пусто</div>
+						</div>
+						<div class="blockButtons">
+							<a href="/" class="button2 getNotes">Получить список</a>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="blockChild noteForm">
+						<form method="POST" action="/submit/0">
+							<div class="blockBox">
+								<textarea class="blockMessageText noteText" name='text' placeholder="Текст заметки" required></textarea>
+								<span class="blockMessageDate"></span>
+							</div>
+							<div class="blockButtons">
+								<a href="/delete/0" class="button1 deleteNote">Удалить</a>
+								<button type="submit" class="button2">Сохранить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
